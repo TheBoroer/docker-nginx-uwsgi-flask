@@ -50,7 +50,7 @@ fi
 
 ## Install PIP requirements
 if [ -f "$WORKDIR/requirements-to-freeze.txt" ] ; then
-  cd $WORKDIR && pip install --no-cache-dir -r requirements-to-freeze.txt --upgrade && pip freeze > requirements.txt &&&& echo "PIP requirements-to-freeze.txt installed"
+  cd $WORKDIR && pip install --no-cache-dir -r requirements-to-freeze.txt --upgrade && pip freeze > requirements.txt && echo "PIP requirements-to-freeze.txt installed"
 elif [ -f "$WORKDIR/requirements.txt" ] ; then
   cd $WORKDIR && pip install --no-cache-dir -r requirements.txt && echo "PIP requirements.txt installed"
 fi
